@@ -1,17 +1,26 @@
-import React from 'react';
+/*
+ * @Description: 
+ * @Date: 2022/12/03 18:58:01
+ * @LastEditTime: 2022/12/03 23:32:02
+ */
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import { HashRouter } from "react-router-dom";
+
+import 'normalize.css'
+import 'antd/dist/reset.css';
+
+import App from '@/App';
+import 'assets/css/index.less'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <App />
+      </Suspense>
+    </HashRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
