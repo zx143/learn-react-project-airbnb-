@@ -1,13 +1,37 @@
 /*
  * @Description: 
- * @Date: 2022/12/04 15:37:08
- * @LastEditTime: 2022/12/04 15:51:10
+ * @Date: 2022/12/05 20:38:52
+ * @LastEditTime: 2022/12/05 20:39:31
  */
 import React, { memo } from 'react'
+import { FooterWrapper } from './style'
+import footerData from "@assets/data/footer.json"
 
 const AppFooter = memo(() => {
   return (
-    <div>AppFooter</div>
+    <FooterWrapper>
+      <div className='wrapper'>
+        <div className='service'>
+          {
+            footerData.map(item => {
+              return (
+                <div className='item' key={item.name}>
+                  <div className='name'>{item.name}</div>
+                  <div className='list'>
+                    {
+                      item.list.map(item => {
+                        return <div className='item' key={item}>{item}</div>
+                      })
+                    }
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
+        <div className='statement'>© 2022 Airbnb, Inc. All rights reserved.条款 · 隐私政策 · 网站地图 · 全国旅游投诉渠道 12301</div>
+      </div>
+    </FooterWrapper>
   )
 })
 
