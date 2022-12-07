@@ -1,12 +1,12 @@
 /*
  * @Description:
  * @Date: 2022/12/05 20:45:11
- * @LastEditTime: 2022/12/06 23:08:03
+ * @LastEditTime: 2022/12/07 23:42:19
  */
 import styled from "styled-components";
 
 export const RoomItemWrapper = styled.li`
-  width: 25%;
+  width: ${props => props.roomWidth};
   padding: 8px;
   margin: 8px 0;
   .inner {

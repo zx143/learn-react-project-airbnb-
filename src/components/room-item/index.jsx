@@ -1,7 +1,7 @@
 /*
  * @Description:
  * @Date: 2022/12/05 20:43:41
- * @LastEditTime: 2022/12/06 23:10:59
+ * @LastEditTime: 2022/12/07 23:42:03
  */
 import { Rating } from "@mui/material";
 import PropTypes from "prop-types";
@@ -9,10 +9,11 @@ import React, { memo } from "react";
 import { RoomItemWrapper } from "./style";
 
 const RoomItem = memo((props) => {
-  const { itemData } = props;
+  const { itemData, roomWidth } = props;
   return (
     <RoomItemWrapper
       verifyColor={itemData?.verify_info?.text_color || "#39576a"}
+      roomWidth={roomWidth}
     >
       <div className="inner">
         <div className="cover">
