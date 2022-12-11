@@ -1,12 +1,12 @@
 /*
  * @Description:
  * @Date: 2022/12/08 22:00:10
- * @LastEditTime: 2022/12/08 22:37:53
+ * @LastEditTime: 2022/12/11 15:57:12
  */
 import styled from "styled-components";
 
 export const TabsWrapper = styled.div`
-  display: flex;
+  /* display: flex; */
   .item {
     flex-basis: 120px;
     flex-shrink: 0;
@@ -16,10 +16,11 @@ export const TabsWrapper = styled.div`
     border: 0.5px solid #d8d8d8;
     white-space: nowrap;
     cursor: pointer;
+    margin-right: 16px;
     ${(props) => props.theme.mixin.boxShadow}
 
-    &:nth-of-type(n + 2) {
-      margin-left: 16px;
+    &:last-child {
+      margin-right: 16px;
     }
     &.active {
       color: #fff;

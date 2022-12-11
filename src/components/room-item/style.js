@@ -1,14 +1,15 @@
 /*
  * @Description:
  * @Date: 2022/12/05 20:45:11
- * @LastEditTime: 2022/12/07 23:42:19
+ * @LastEditTime: 2022/12/11 19:29:45
  */
 import styled from "styled-components";
 
-export const RoomItemWrapper = styled.li`
-  width: ${props => props.roomWidth};
+export const RoomItemWrapper = styled.div`
+  width: ${(props) => props.roomWidth};
   padding: 8px;
-  margin: 8px 0;
+  /* margin: 8px 0; */
+  flex-shrink: 0;
   .inner {
     width: 100%;
   }
@@ -25,7 +26,6 @@ export const RoomItemWrapper = styled.li`
       top: 0;
       width: 100%;
       height: 100%;
-
     }
   }
 
@@ -33,7 +33,7 @@ export const RoomItemWrapper = styled.li`
     margin: 10px 0 5px;
     font-size: 12px;
     font-weight: 700;
-    color: ${props => props.verifyColor};
+    color: ${(props) => props.verifyColor};
   }
 
   .name {
@@ -43,7 +43,7 @@ export const RoomItemWrapper = styled.li`
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical
+    -webkit-box-orient: vertical;
   }
 
   .price {
@@ -55,7 +55,8 @@ export const RoomItemWrapper = styled.li`
     align-items: center;
     font-size: 12px;
     font-weight: 600;
-    color: ${props => props.theme.textColor.primary};
+    color: ${(props) => props.theme.textColor.primary};
+    font-family: 'Microsoft YaHei';
 
     .count {
       margin: 0 2px 0 4px;

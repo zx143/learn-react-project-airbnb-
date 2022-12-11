@@ -1,7 +1,7 @@
 /*
  * @Description:
  * @Date: 2022/12/09 21:41:30
- * @LastEditTime: 2022/12/09 22:38:11
+ * @LastEditTime: 2022/12/10 21:30:10
  */
 import PropTypes from "prop-types";
 import React, { memo, useState, useCallback } from "react";
@@ -9,6 +9,7 @@ import SectionHeader from "@/components/section-header";
 import SectionRooms from "@/components/section-rooms";
 import SectionTabs from "@/components/section-tabs";
 import { SectionV2Wrapper } from "./style";
+import SectionFooter from "@/components/section-footer";
 
 const HomeSectionV2 = memo((props) => {
   const { infoData } = props;
@@ -33,6 +34,7 @@ const HomeSectionV2 = memo((props) => {
         roomWidth={"33.3333%"}
         roomList={infoData.dest_list?.[name]}
       />
+      <SectionFooter text={name}/>
     </SectionV2Wrapper>
   );
 });
