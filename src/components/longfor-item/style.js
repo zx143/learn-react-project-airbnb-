@@ -1,9 +1,9 @@
 /*
  * @Description:
  * @Date: 2022/12/11 17:35:51
- * @LastEditTime: 2022/12/11 18:05:18
+ * @LastEditTime: 2022/12/12 20:37:08
  */
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export const ItemWrapper = styled.div`
   flex-shrink: 0;

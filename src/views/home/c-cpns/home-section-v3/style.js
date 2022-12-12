@@ -1,9 +1,9 @@
 /*
  * @Description:
  * @Date: 2022/12/11 18:14:30
- * @LastEditTime: 2022/12/11 19:27:22
+ * @LastEditTime: 2022/12/12 20:36:15
  */
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export const SectionV3Wrapper = styled.div`
   width: 100%;
