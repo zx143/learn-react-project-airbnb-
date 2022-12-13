@@ -1,7 +1,7 @@
 /*
  * @Description:
  * @Date: 2022/12/10 21:43:42
- * @LastEditTime: 2022/12/11 16:07:23
+ * @LastEditTime: 2022/12/13 21:39:30
  */
 // import PropTypes from "prop-types";
 import IconArrowLeft from "@/assets/svg/icon-arrow-left";
@@ -38,10 +38,6 @@ const ScrollView = memo((props) => {
     }
     const newEl = scrollContentRef.current.children[newIndex];
     const newOffsetLeft = newEl.offsetLeft;
-    console.log(
-      "🚀 ~ file: index.jsx:41 ~ changeScrollHandle ~ newOffsetLeft",
-      newOffsetLeft
-    );
     scrollContentRef.current.style.transform = `translateX(-${newEl.offsetLeft}px)`;
     setPosIndex(newIndex);
     // 是否继续显示 right-arrow

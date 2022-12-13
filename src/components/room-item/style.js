@@ -1,7 +1,7 @@
 /*
  * @Description:
  * @Date: 2022/12/05 20:45:11
- * @LastEditTime: 2022/12/11 19:29:45
+ * @LastEditTime: 2022/12/13 22:05:29
  */
 import styled from "styled-components";
 
@@ -26,6 +26,7 @@ export const RoomItemWrapper = styled.div`
       top: 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 
