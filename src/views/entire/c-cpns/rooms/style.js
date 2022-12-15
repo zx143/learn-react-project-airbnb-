@@ -1,17 +1,23 @@
 /*
  * @Description:
  * @Date: 2022/12/12 20:34:44
- * @LastEditTime: 2022/12/13 21:28:27
+ * @LastEditTime: 2022/12/14 21:27:59
  */
 import styled from "styled-components";
 export const RoomsWrapper = styled.div`
   position: relative;
-  padding: 40px 20px;
-  margin-top: 50px;
+  padding: 100px 20px 20px;
+  /* margin-top: 50px; */
 
   .list {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .fixed-placeholder {
+    height: 120px;
+    width: 100px;
+    position: relative;
   }
 
   .title {

@@ -1,19 +1,19 @@
 /*
  * @Description:
  * @Date: 2022/12/12 20:30:03
- * @LastEditTime: 2022/12/12 21:05:44
+ * @LastEditTime: 2022/12/14 21:01:32
  */
 import styled from "styled-components";
 
 export const FilterWrapper = styled.div`
   position: fixed;
-  z-index: 999;
+  z-index: 9;
   left: 0;
   right: 0;
   top: 80px;
   display: flex;
   align-items: center;
-  height: 48px;
+  height: 49px;
   padding-left: 16px;
   border-bottom: 1px solid #f2f2f2;
   background-color: #fff;
