@@ -1,7 +1,7 @@
 /*
  * @Description:
  * @Date: 2022/12/05 20:45:11
- * @LastEditTime: 2022/12/14 21:36:19
+ * @LastEditTime: 2022/12/18 12:51:34
  */
 import styled from "styled-components";
 
@@ -79,7 +79,26 @@ export const RoomItemWrapper = styled.div`
       left: 0;
       right: 0;
       bottom: 10px;
-      
+      margin: 0 auto;
+
+      .dot-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / ${(props) => props.indicatorNum});
+        .dot {
+          width: 6px;
+          height: 6px;
+          background-color: #fff;
+          border-radius: 50%;
+
+          &.active {
+            width: 8px;
+            height: 8px;
+            background-color: skyblue;
+          }
+        }
+      }
     }
   }
 

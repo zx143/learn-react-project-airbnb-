@@ -1,7 +1,7 @@
 /*
  * @Description:
  * @Date: 2022/12/03 23:13:53
- * @LastEditTime: 2022/12/03 23:30:09
+ * @LastEditTime: 2022/12/17 19:02:18
  */
 
 import React from "react";
@@ -11,6 +11,7 @@ import NotFound from "../views/NotFound";
 const Home = React.lazy(() => import("@/views/home"));
 const Entire = React.lazy(() => import("@/views/entire"));
 const Detail = React.lazy(() => import("@/views/detail"));
+const Demo = React.lazy(() => import("@/views/demo"));
 
 const routes = [
   {
@@ -28,6 +29,10 @@ const routes = [
   {
     path: "/detail",
     element: <Detail />,
+  },
+  {
+    path: "/demo",
+    element: <Demo/>
   },
   {
     path: '*',
