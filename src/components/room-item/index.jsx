@@ -1,7 +1,7 @@
 /*
  * @Description:
  * @Date: 2022/12/05 20:43:41
- * @LastEditTime: 2022/12/18 12:54:36
+ * @LastEditTime: 2022/12/18 14:04:11
  */
 import IconArrowLeft from "@/assets/svg/icon-arrow-left";
 import IconArrowRight from "@/assets/svg/icon-arrow-right";
@@ -14,9 +14,13 @@ import React, { memo, useRef, useState } from "react";
 import { RoomItemWrapper } from "./style";
 
 const RoomItem = memo((props) => {
-  const { itemData, roomWidth, indicatorNum = 7 } = props;
+  const { itemData, roomWidth, indicatorNum = 7, itemClick } = props;
   const sliderRef = useRef();
   const [selectIndex, setSelectIndex] = useState(0);
+
+  function handleItemClick() {
+    itemClick && itemClick(itemData);
+  }
 
   function handleControlIconClick(isRight = true) {
     const len = itemData.picture_urls?.length;
@@ -85,6 +89,7 @@ const RoomItem = memo((props) => {
       verifyColor={itemData?.verify_info?.text_color || "#39576a"}
       roomWidth={roomWidth}
       indicatorNum={indicatorNum}
+      onClick={handleItemClick}
     >
       <div className="inner">
         {!itemData.picture_urls ? pictureEl : sliderEl}
